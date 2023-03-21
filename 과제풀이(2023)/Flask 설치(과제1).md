@@ -61,8 +61,19 @@ if __name__ =="__main__":
 
 ```
 
+<br>
+
+> 이 명령어 사용해 flask 프레임워크를 설치 해 줘야  flask를 사용하가능함.
+> 
+> 
+> ➡️ `pip3 install flask` 
+>
+
+<br>
+
 저장 후 실행하면 flask server 돌아감 → `flask run` 
 <br>
+
 ![](2023-03-21-10-14-30.png)
 
 
