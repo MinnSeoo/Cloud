@@ -2,7 +2,7 @@
 
 Virtual Priavte Network Computing의 약자로 IP대역(CIDR) 할당하여 가상의 네트워크 환경을 구성하는 것이다.
 
-VPC 유형에도 2가지가 있는데 바로 **VPC Peering**과 **Transit Gateway**이다.
+VPC를 연결하는 방법은 여러가지가 있지만 그중에 VPC Peering과 Transit Gateway 이 두 가지를 설명하려고 한다.
 
 <br>
 
