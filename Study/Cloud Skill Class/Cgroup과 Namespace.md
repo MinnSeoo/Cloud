@@ -1,12 +1,12 @@
 # **Cgroup과 Namespace 정리**
 
----
-
 ## **Cgroup이란?**
 
 Cgroup은 Control groups의 약자로 프로세스들이 사용할 수 있는 컴퓨팅의 자원을 제한 및 격리 시킬 수 있는 리눅스 커널 기능이다.
 
 Cgroup을 이용하면 Memory, CPU, Network, Device, l/O 같은 자원들을 제한 시킬 수 있다.
+
+<br>
 
 ## **Namespace란?**
 
