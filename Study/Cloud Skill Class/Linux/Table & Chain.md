@@ -2,7 +2,7 @@
 
 ### **Table & Chain**
 
-리눅스에서** iptables의 RULE 개념 중 하나**이다.
+리눅스에서 **iptables의 RULE 개념 중 하나**이다.
 
 Table 과 Chain에 관련된 내용은 iptables man page에 기술되어 있다.
 
@@ -20,6 +20,16 @@ Table 은 kernel level 에서 미리 정의되어 추가 및 삭제가 용이하
 - **NAT** - IP와 PORT 등을 변환하는 역할을 한다.
 - **Mangle** - 특수 규칙을 이용해 패킷 구조를 변경한다.
 - **Raw** - Netfilter API의 기본 tracking 과 별개로 존재하는 룰을 만들때 사용된다.
+
+<br>
+
+### **[PreRouting & PostRouting]**
+
+Table의 종류 중 하나인 NAT는 2개의 Chain을 포함하는데, 바로 PreRouting과 PostRouting이다.
+
+- **PreRouting** - **DNAT**(Destnation NAT) 즉, **외부 IP를 내부의 사설 IP**로 포워딩 하는 경우 사용한다.
+- **PostRouting** - **SNAT**(Source NAT) 즉, **내부 사설 IP를 외부 공인 IP**로 변환할 때 사용한다.
+
 
 <br>
 
