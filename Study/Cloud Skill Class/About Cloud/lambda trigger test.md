@@ -20,12 +20,12 @@
 import boto3
 
 region = 'ap-northeast-2'
-instance = 'i-0c96b6f78026c12fa'       # 리스트 형태로 지정하지 않아서 오류 발생함.
-
+instance = 'i-0c96b6f78026c12fa'    # 리스트 형태로 지정하지 않아서 오류 발생함.
 def lambda_handler(event, context):
-ec2 = boto3.client('ec2',region-name = region)
-ec2.start_instance(InstanceId = instance)
-print('start your instance : ' + str(instance))
+	ec2 = boto3.client('ec2', region_name = region)
+	response = ec2.stop_instances(InstanceIds = instance)
+	print("Instance Stoped : " + str(response))
+
 ```
 
 위와 같이 코드를 작성하고 테스트를 실행시켰는데 정상적으로 실행되지 않고 오류가 발생하였다.
