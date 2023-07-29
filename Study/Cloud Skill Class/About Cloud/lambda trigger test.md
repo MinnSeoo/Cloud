@@ -44,7 +44,7 @@ def lambda_handler(event, context):
 <br>
 
 
-위 의 코드는 start-ec2 람다의 코드였고 아래는 stop-ec2 람다 코드이다.
+위 의 코드는 start-ec2 람다의 코드이고 아래는 stop-ec2 람다 코드이다.
 
 <br>
 
@@ -65,6 +65,21 @@ def lambda_handler(event, context):
 
 코드를 테스트 해 보면 start-ec2를 테스트 돌렸을때 켜진 my-bastion-ec2가 꺼지는 것을 볼 수 있다.
 
+<br>
 
+이제 start-ec2, stop-ec2의 람다 함수를 eventbridge로 트리거 하여 특정시간에 자동으로 실행될 수 있도록 하겠다. 
+
+start-ec2, stop-ec2의 람다 함수에 트리거 추가 버튼을 눌러 eventbridge의 규칙을 생성해 준다.
+
+과제에서 cron 표현식을 사용하라고 했기 때문에 eventbridge scheduler에서 계속하기 버튼을 클릭한 후 
+이름을 적어주고 일정 패턴을 지정하는 부분에 반복 일정의 cron 기반 일정을 선택하여 cron 표기법에 맞게끔 내가 원하는 시간을 지정해 주고 생성 버튼을 클릭한다.
+
+그럼 이제 내가 지정한 시간에 start, stop 함수가 실행되는걸 볼 수 있다.
+
+아래 img 들은 event들이 발생한 기록들을 기록해 두는 log img 이다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0c49820a-1ca0-4a25-aa06-66670491d38d/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a4e15450-6b1b-4c2a-b2d0-4c00a39ef2ac/Untitled.png)
 
 
