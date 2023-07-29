@@ -78,8 +78,10 @@ start-ec2, stop-ec2의 람다 함수에 트리거 추가 버튼을 눌러 eventb
 
 아래 img 들은 event들이 발생한 기록들을 기록해 두는 log img 이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0c49820a-1ca0-4a25-aa06-66670491d38d/Untitled.png)
+### **[ec2-start]**
+<img width="743" alt="image" src="https://github.com/MinnSeoo/Cloud/assets/102645965/9b33960a-4589-4b56-8259-2cabe97ac73f">
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a4e15450-6b1b-4c2a-b2d0-4c00a39ef2ac/Untitled.png)
+<br>
 
-
+### **[ec2-stop]**
+<img width="814" alt="image" src="https://github.com/MinnSeoo/Cloud/assets/102645965/16211056-84df-41ee-a09b-37dcbff3eb91">
