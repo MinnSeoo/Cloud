@@ -76,3 +76,64 @@ IGW는 IPv4와 IPv6 두 개의 트래픽을 처리할 수 있지만 Egress-only 
 
 보통의 VPC간의 통신은 Public IP를 통해 이루어진다. 하지만 Public IP를 통해 통신할 경우에는 데이터의 안정성에 대한 문제가 발생할 수 있다는 단점이 있다. 이를 해결하기 위해 Private  IP 통해 다른 VPC간 통신하기 때문에 데이터의 안정성을 보장받을 수 있기 때문에 VPC Peering을 사용한다.
 
+## **[ 2 ]**
+
+
+
+## **[ 4 ]**
+### **EndPoint 란 ?**
+
+EndPoint란 request를 보낼 때 필요한 목적지라고 할 수 있다. 예를 들어 인터넷을 통해 어떤 서비스 혹은 리소스로 접근할 수 있는 특정 URL이나 네트워크 주소가 될 수 있다.
+
+<br>
+
+### **VPC EndPoint 란 ?**
+
+EndPoint 유형 중 하나로, VPC 내부 또는 외부 AWS 서비스들(S3, Dynamo DB, Cloudwatch)과 통신할 때 인터넷 통신이 되지 않더라도 Private한 통신 환경을 통해 서비스에 접근할 수 있게 한다.
+
+즉, VPC EndPoint는 AWS 서비스들을 연결시켜주는 중간 매개체로서, AWS에서 VPC 외부로 트래픽이 나가지 않고 AWS 서비스들을 사용할 수 있게 만들어주는 서비스이다.
+
+<br>
+
+### **VPC EndPoint의 이점**
+
+- 보안 측면 강화
+- 비용 절감 효과
+- 권한 제어 … 등
+
+<br>
+
+### **VPC EndPoint 종류 3가지**
+
+VPC EndPoint는 Gateway EndPoint, Interface EndPoint, LoadBalancer EndPoint 이렇게 총 세 가지의 유형으로 나뉜다.
+
+<br>
+
+### **Gateway EndPoint**
+
+NAT 없어도 Route Table을 이용하여 Endpoint에 Access 하는 방식으로, Routing Table에서 경로의 대상을 지정하여 사용한다.(S3, DynamoDB 일부만 지원)
+
+(이때 AWS PrivateLink를 활성화 하지 않음)
+
+- **PrivateLink** - vpc 간에 private ip 주소를 사용하여 안전하게 연결할 수 있도록 해주는 서비스이다.
+    
+    (인터넷을 거치지 않고 vpc간 안전하게 통신할 수 있다.)
+                                               
+
+<br>
+
+### **Interface EndPoint**
+
+AWS PrivateLink 기술을 사용하여 구성되며, VPC 내부에 전용 Routing Table이 생성된다.
+
+AWS 서비스에 대한 ENI(Elastic Network Interface)가 일반적으로 한 개 생성된다.
+
+그리고 ENI(Elastic Network Interface)를 이용하여 IP가 할당되고 해당 IP로 AWS 서비스들에 Access 한다. (이때 IP를 할당시 Private IP가 할당된다.)
+
+<br>
+
+### **Gateway LoadBalancer EndPoint**
+
+여러 개의 VPC나 계정 사이에서 인터넷 트래픽을 분산 시켜주는 로드밸런서 서비스이다.
+
+이를 사용하면 다중 VPC, 계정 간 통신이 가능하다.
