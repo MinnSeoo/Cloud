@@ -85,3 +85,9 @@ start-ec2, stop-ec2의 람다 함수에 트리거 추가 버튼을 눌러 eventb
 
 ### **[ec2-stop]**
 <img width="814" alt="image" src="https://github.com/MinnSeoo/Cloud/assets/102645965/16211056-84df-41ee-a09b-37dcbff3eb91">
+
+<br>
+
+**[아래 img는 4일 동안 eventbridge가 실행된 기록을 보여주는 모니터링 화면이다]**
+
+<img width="1372" alt="image" src="https://github.com/MinnSeoo/Cloud/assets/102645965/ff5db3cb-080d-4120-b2c0-c322443f77fd">
