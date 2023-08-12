@@ -54,3 +54,17 @@ REST 유형을 선택하고 다음으로 넘어가서 이름을 지정하고 생
   "instance_id": "i-09261deb31a99685a"
 }
 ```
+
+작성하고 나서 저장 후 테스트를 해 보면
+
+<img width="742" alt="image" src="https://github.com/MinnSeoo/Cloud/assets/102645965/c166068a-9214-4366-b20b-b31bced574fb">
+
+위와 같이 status code가 200이 반환되며 해당 Instance가 실행되는걸 볼 수 있다.
+
+<img width="813" alt="image" src="https://github.com/MinnSeoo/Cloud/assets/102645965/630d4e6b-2d38-4cc1-a1ab-934e07a3b0ec">
+
+<br><br>
+
+**[ LOG 기록 ]**
+
+<img width="218" alt="image" src="https://github.com/MinnSeoo/Cloud/assets/102645965/c2bc704b-05a5-4686-8e64-2a8227dce646">
